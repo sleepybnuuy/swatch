@@ -41,7 +41,7 @@ public sealed class Swatch : IDalamudPlugin {
 		PluginInterface.UiBuilder.OpenConfigUi += this.ToggleConfigUi;
 
 		CommandManager.AddHandler(CommandName, new CommandInfo(this.OnCommand) {
-			HelpMessage = "open swatch-dtr config"
+			HelpMessage = "open Swatch config"
 		});
 
 		this._dtrEntry = DtrBar.Get(DtrTitle);
