@@ -8,10 +8,10 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Author>Bwuny</Author>
+        <Author>bwuny</Author>
         <Name>Swatch</Name>
         <InternalName>Swatch</InternalName>
-        <Punchline>shows the .beat time</Punchline>
+        <Punchline>shows the current time in .beats</Punchline>
         <Description>a server info bar addon to display swatch internet time</Description>
         <AssemblyVersion>0.0.1</AssemblyVersion>
         <RepoUrl>https://github.com/sleepybnuuy/swatch</RepoUrl>
