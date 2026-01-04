@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/14.0.1">
+    <PropertyGroup>
+    <Version>0.0.1</Version>
+    <PackageProjectUrl>https://github.com/sleepybnuuy/swatch-dtr</PackageProjectUrl>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+    <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Author>Bwuny</Author>
+        <Name>swatch</Name>
+        <InternalName>swatch-dtr</InternalName>
+        <Punchline>just beat it</Punchline>
+        <Description>a DTR-bar addon to display swatch internet time</Description>
+        <AssemblyVersion>0.0.1</AssemblyVersion>
+        <RepoUrl>https://github.com/sleepybnuuy/swatch-dtr</RepoUrl>
+        <IconUrl></IconUrl>
+        <ApplicableVersion>any</ApplicableVersion>
+        <Tags>dtr;time;swatch</Tags>
+        <DalamudApiLevel>14</DalamudApiLevel>
+        <TestingDalamudApiLevel>14</TestingDalamudApiLevel>
+        <AcceptsFeedback>true</AcceptsFeedback>
+    </PropertyGroup>
+</Project>
