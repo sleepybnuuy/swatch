@@ -6,4 +6,4 @@ adds the current .beat to the DTR-bar with minimal styling options. each .beat i
 
 inspired by Phantasy Star Online - never miss a divine punishment window again
 
-![image]()
+![image](https://raw.githubusercontent.com/sleepybnuuy/swatch/master/icon.png)
