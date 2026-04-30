@@ -53,8 +53,6 @@ public sealed class Swatch : IDalamudPlugin {
 		this.SetLabel();
 
 		Framework.Update += this.SwatchUpdate;
-
-		Log.Information($"===A cool log message from {PluginInterface.Manifest.Name}===");
 	}
 
 	private void OnCommand(string command, string args) => this.ToggleConfigUi();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/14.0.1">
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
     <PropertyGroup>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <PackageProjectUrl>https://github.com/sleepybnuuy/swatch</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
@@ -13,13 +13,13 @@
         <InternalName>Swatch</InternalName>
         <Punchline>shows the current time in .beats</Punchline>
         <Description>a server info bar addon to display swatch internet time</Description>
-        <AssemblyVersion>0.0.1</AssemblyVersion>
+        <AssemblyVersion>0.0.2</AssemblyVersion>
         <RepoUrl>https://github.com/sleepybnuuy/swatch</RepoUrl>
         <IconUrl>https://raw.githubusercontent.com/sleepybnuuy/swatch/master/icon.png</IconUrl>
         <ApplicableVersion>any</ApplicableVersion>
         <Tags>dtr;time;swatch</Tags>
-        <DalamudApiLevel>14</DalamudApiLevel>
-        <TestingDalamudApiLevel>14</TestingDalamudApiLevel>
+        <DalamudApiLevel>15</DalamudApiLevel>
+        <TestingDalamudApiLevel>15</TestingDalamudApiLevel>
         <AcceptsFeedback>true</AcceptsFeedback>
     </PropertyGroup>
 </Project>
