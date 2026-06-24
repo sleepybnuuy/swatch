@@ -33,6 +33,13 @@ public class ConfigWindow : Window, IDisposable {
 			updated = true;
 		}
 
+		var padTriple = this._config.PadToTripleZero;
+		if (ImGui.Checkbox("Pad label to 3 decimal spaces (ex: @ 009)", ref padTriple)) {
+			this._config.PadToTripleZero = padTriple;
+			this._plugin.SetLabel();
+			updated = true;
+		}
+
 		if (updated) this._config.Save();
 	}
 }
