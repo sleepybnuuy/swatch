@@ -22,7 +22,7 @@ public sealed class Swatch : IDalamudPlugin {
 	private readonly WindowSystem _windowSystem = new("Swatch");
 	private readonly IDtrBarEntry _dtrEntry;
 
-	private int _beats;
+	private uint _beats;
 	private DateTime _nextUpdateAfter;
 
 	private const string CommandName = "/swatch";
@@ -63,14 +63,14 @@ public sealed class Swatch : IDalamudPlugin {
 		if (DateTime.UtcNow < this._nextUpdateAfter) return; // skip updating if we're too far from the beat change window
 
 		var newBeat = GetBeats();
-		if (newBeat <= this._beats) return; // if we get the same beat, don't fire an update
+		if (newBeat <= this._beats && !(newBeat == 0 && this._beats == 999)) return; // if we get the same or lesser beat, and we're not in the rollover case, don't fire an update
 
 		this._beats = newBeat;
 		this.SetNextUpdate();
 		this.SetLabel();
 	}
 
-	private static int GetBeats() {
+	private static uint GetBeats() {
 		var ms = GetUtcMs();
 		return MsToBeats(ms);
 	}
@@ -81,13 +81,18 @@ public sealed class Swatch : IDalamudPlugin {
 		return ((time.Hour * 60 + time.Minute) * 60 + time.Second) * 1000 + time.Millisecond;
 	}
 
-	private static int MsToBeats(int ms) => (int)Math.Floor((double)Math.Abs(ms / 86400));
+	private static uint MsToBeats(int ms) => (uint)Math.Floor((double)Math.Abs(ms / 86400));
 
 	public void SetLabel() {
 		var label = "";
+		string? format = null;
+
 		if (this.Configuration.ShowInternetLabel)
 			label += "internet time ";
-		label += "@ " + this._beats.ToString(CultureInfo.InvariantCulture);
+		if (this.Configuration.PadToTripleZero)
+			format = "D3";
+
+		label += "@ " + this._beats.ToString(format, CultureInfo.InvariantCulture);
 		this._dtrEntry.Text = label;
 	}
 

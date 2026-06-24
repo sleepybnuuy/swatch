@@ -7,7 +7,8 @@ namespace Swatch;
 [Serializable]
 public class Configuration : IPluginConfiguration {
 	public int Version { get; set; } = 0;
-	public bool ShowInternetLabel { get; set; } = false;
+	public bool ShowInternetLabel { get; set; } = true;
+	public bool PadToTripleZero { get; set; } = true;
 
 	// The below exists just to make saving less cumbersome
 	public void Save() {
